@@ -1,0 +1,20 @@
+section#octopus {
+	position: relative;
+	margin-left: 500px;
+	margin-top: 150px;
+	z-index: -1
+
+}
+section#hat {
+	position: absolute;
+	left: 490px;
+	top: 75px;
+	
+
+}
+section#glasses {
+	position: absolute;
+	left: 550px;
+	top: 250px;
+
+}
