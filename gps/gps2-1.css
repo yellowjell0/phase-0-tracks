@@ -1,0 +1,29 @@
+section.column-1 {
+/*position: relative;
+float: left;*/
+background-color: lightblue;
+display: inline-block;
+width: 49%;
+/*margin: 20px;
+border: solid 10px;
+padding: 20px;*/
+}
+
+section.column-2 {
+/*display: inline-block;
+position: absolute;
+float:left;*/
+background: green;
+display: inline-block;
+width: 49%;
+vertical-align: top;
+/*padding: 30px;
+border: dotted;
+margin: 10px;*/
+}
+
+img {height: 300px;
+width: 500px;
+margin-left: 60px}
+
+body {font-family: helvetica;}
