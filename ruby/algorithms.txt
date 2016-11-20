@@ -1,0 +1,23 @@
+Using an elevator (for a stupid robot)
+- If you want to go up to a higer floor, press the up arrow
+- If you want to go down to a lower floor, press the down arrow
+- Wait for the elevator to open
+- Make sure the directional arrow light is pointed in desired direction (up or down) upon entering
+- Enter elevator
+- Turn around and face the panel of buttons on the right
+- Press button of the desired floor (1 - 100)
+- Wait for the number in the top middle of the elevator to display the number you have chosen
+- When the number you have chosen is displayed, wait for the door to open
+- Exit the elevator
+
+Entering a parking deck
+- Drive up ramp into the parking deck
+- Stop at the arm and ticket machine
+- Press the ticket button to the left of you on the ticket machine
+- Retrieve ticket, and wait for the arm to rise
+- Put the ticket in your mirror visor
+- Drive into the parking deck past the arm
+- Ascend in the parking lot until you find a desired parking space
+- When desired parking space is found, park within the lines of the parking spot, making sure there is enough room to open your door
+- Exit vehicle and parking deck
+- Enter desired location
