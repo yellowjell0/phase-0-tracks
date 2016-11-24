@@ -19,12 +19,12 @@ rooms = gets.to_i
 # Create a hash from the info entered and print the hash
 
 client_information = {
-  1 => name,
-  2 => children,
-  3 => age,
-  4 => decor_theme,
-  5 => hardwood_floors,
-  6 => rooms
+  name: name,
+  children: children,
+  age: age,
+  decor_theme: decor_theme,
+  hardwood_floors: hardwood_floors,
+  rooms: rooms
 }
 p client_information
 
@@ -36,27 +36,27 @@ until errors == no_errors
 errors = gets.chomp
 if errors == "name"
   puts "What was the correction?"
-  client_information[1] = gets.chomp
+  client_information[:name] = gets.chomp
   puts "Were there any other errors? Enter done when finished."
   elsif errors == "children"
   puts "What was the correction?"
-    client_information[2] = gets.chomp
+    client_information[:children] = gets.chomp
     puts "Were there any other errors? Enter done when finished."
     elsif errors == "age"
     puts "What was the correction?"
-      client_information[3] = gets.chomp
+      client_information[:age] = gets.chomp
       puts "Were there any other errors? Enter done when finished."
       elsif errors == "decor"
       puts "What was the correction?"
-        client_information[4] = gets.chomp
+        client_information[:decor] = gets.chomp
         puts "Were there any other errors? Enter done when finished."
         elsif errors == "floors"
         puts "What was the correction?"
-          client_information[5] = gets.chomp
+          client_information[:hardwood_floors] = gets.chomp
         puts "Were there any other errors? Enter done when finished."
           elsif errors == "rooms"
           puts "What was the correction?"
-            client_information[6] = gets.chomp
+            client_information[:rooms] = gets.chomp
             puts "Were there any other errors? Enter done when finished."
 end
 end
