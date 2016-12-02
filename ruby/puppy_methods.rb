@@ -1,56 +1,68 @@
 class Puppy
 
+  def initialize
+    puts "Initializing new puppy instance..."
+  end
+
   def fetch(toy)
     puts "I brought back the #{toy}!"
     toy
   end
-  def speak(x)
-    x = 'Woof'*x
+
+  def speak(int)
+    int.times do
+      puts "Woof!"
+    end
   end
+
   def roll_over
-    p 'Rolls Over'
+    puts "*rolls over*"
   end
-  def dog_years(x)
-    y = ""
-    y = x * 7
-    p y
+
+  def dog_years(human_years)
+    human_years * 7
   end
-  def chase_your_tail
-    p 'Chases tail'
+
+  def chase_tail
+    puts "*chases tail*"
   end
-  def initialize
-    p 'Initializing new puppy instance ...'
-  end
- 
- end
-instance_for_fetch = Puppy.new
-instance_for_fetch.fetch('ball')
-instance_for_fetch.speak(10)
-instance_for_fetch.roll_over
-instance_for_fetch.dog_years(5)
+
+end
+
+fido = Puppy.new
+fido.fetch("ball")
+fido.speak(3)
+fido.roll_over
+puts fido.dog_years(5)
+fido.chase_tail
 
 class Frustration_assistant
 
   def initialize
-    p 'You can do it!'
+    puts "You can do it!"
   end
-  def need_help
-    p 'Google it!'
-  end
+
   def cant_focus
-    p 'Drink coffee!'
-    end
+    puts "Drink Coffee!"
   end
-  
+
+  def need_help
+    puts "Google it!"
+  end
+
+end
+
 frustration_assistant_array = []
-    i = 0
-  loop do
-    i += 1
-frustration_assistant_array.push Frustration_assistant.new
-break if i == 50
-  end
-  frustration_assistant_array.each do |x|
-   p x.need_help
-   p x.cant_focus
-    
-  end
+
+50.times do |i|
+  # puts i
+  frustration_assistant_array.push(Frustration_assistant.new)
+end
+
+
+# p frustration_assistant_array.length
+
+frustration_assistant_array.each do |assistant|
+  assistant.cant_focus
+  assistant.need_help
+end
