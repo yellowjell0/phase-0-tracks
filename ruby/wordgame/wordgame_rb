@@ -1,45 +1,37 @@
 # create a glass for a word game
 class GuessGame
-  attr_reader :solved, :secret_word, :hint, :guess, :guess_count
-  attr_accessor :new_hint
+  attr_reader :solved, :secret_word, :guess_count
+  attr_accessor :new_hint, :hint, :guess
   
   # Create a class attribute in which the first string that is inputted will become the secret code
   	def initialize(secret_word)
     @solved = false
 	  @secret_word = secret_word.upcase.split('')
 	  @guess_count = @secret_word.length
-	  
 	  end
-	 #The second string inputted will guess what the secret code is by using methods to check the index of the first string for individual letters that are equal to the new string.  
-	  def guess(guess)
+	 
+	#The second string inputted will guess what the secret code is by using methods to check the index of the first string for individual letters that are equal to the new string.  
+	  def guess_input(guess)
 	    @guess = guess.upcase.split('')
 	  end
 	  
-    def updated_hint(new_hint)
-      new_hint.each do |x|
-        if @secret_word.include?(x) == true
-          new_hint.flatten.delete(x)
-        end
-  end
-end
-      # The user has the length of the amount of letters in the secret code before they get a taunting message
+  # The user has the length of the amount of letters in the secret code before they get a taunting message
       def game_over
-        @guess_count -= 1
-        if @guess_count < 0
-          game_over = true
-          puts "Wow, that couldn't have been any easier. Oh, I get it. You weren't trying."
-          exit!
-        
-      # Print a congratulatory message if the user guesses correctly 
-        elsif @guess == @secret_word
-          @solved == true 
-          puts "Wow, you're really good at this. No matter what everyone says about you, you're a winner in my eyes."
-          exit!
-          
-    end
-  end
+       @guess_count -= 1
+          if @guess_count < 0
+            game_over = true
+            puts "Wow, that couldn't have been any easier. Oh, I get it. You weren't trying."
+            exit!
+ # Print a congratulatory message if the user guesses correctly 
+          elsif @guess == @secret_word
+            @solved == true 
+             puts "Wow, you're really good at this. No matter what everyone says about you, you're a winner in my eyes."
+           exit!
+           end
+      end
     
-	  def count
+   
+	   def count
 	    @count
 	  end
 	  
@@ -47,16 +39,15 @@ end
 	    @secret_word
 	  end
 # 	If the secret code’s letters are equal to the solve attempt, those letters will be returned, if not - will be returned.   
-	  def hint
-	    @hint = @secret_word
-	    @hint.map do |x|
-	    if @guess.include?(x) == false
-	      x = "_"
-	    else
-	      x = x
+	   def find_hint
+	     @hint = @secret_word.map do |x|
+	       if @guess.include?(x) == false
+	        x = "_"
+	      else
+	        x = x
 	      end
+	    end
 	  end
-	end
 end
 
 
@@ -73,10 +64,13 @@ new_hint = []
 until guess_the_word_game.game_over
 puts "What is the secret word?"
 puts "x"*25
-guess_the_word_game.guess(gets.chomp)
-guess_the_word_game.hint
-new_hint.push << guess_the_word_game.hint
-p guess_the_word_game.updated_hint(new_hint)
+guess_the_word_game.guess_input(gets.chomp)
+guess_the_word_game.find_hint
+new_hint << guess_the_word_game.hint
+p new_hint
+
+
+
 puts "x"*25
 puts "You have #{guess_the_word_game.guess_count} chances left."
 end
