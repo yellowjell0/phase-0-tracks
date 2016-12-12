@@ -1,11 +1,7 @@
-// method: longestPhrase
+// method: longestWord
 // input: array
 // steps: set vavue for max, set return, iterate through each index of the array, 
-// output:
-
-
-
-
+// output: string
 function longestWord(array) {
   var maxVal = 0;
   result = "";
@@ -39,11 +35,10 @@ var hash2 = {name: "Tamir", age: 54};
 keyValueCheck(hash1,hash2);
 
 
-// method: randomNumber
+// method: generateTestData
 // input: integer
 // steps: take an integer as an argument and iterate through an array of strings according to the integer. Then return a random string that is the length of the argument, but random letters of the string
 // output: string
-
 function generateTestData(n) {
   function randomInt(max) {
     return Math.floor(Math.random() * max) + 1;
@@ -62,7 +57,7 @@ function generateTestData(n) {
   return array;
 }
 
-    //Generates an array, prints the array(*10), feeds the array to longestWord, and prints the result.
+  //Generates an array, prints the array(*10), feeds the array to longestWord, and prints the result.
 for (var i = 0; i < 10; i++) {
   var testData = generateTestData(4);
   console.log(longestWord(testData));
