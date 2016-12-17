@@ -1,58 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>How Are You</title>
+  <title>ASPCA Magazine Fundraiser</title>
 </head>
-	<body>
-	<h1>How Are You Today?</h1>
-	<form action="https://httpbin.org/post" method="post">
-		<p>
-			<label>
-				"What is your name?"
-				<input name="yourname">
-			</label>
-		</p>
-		<p>
-			<label>
-				"Secret Code?"
-				<input name="secretcode">
-			</label>
-		</p>
-		<p>
-			<label>
-				"Email?"
-				<input name="email">
-			</label>
-		</p>
-		<p>
-			<label>
-				<input type="radio" name="mood" value="happy">"Happy"
+<body>
+<form name="magazine subscription" action="success.html" method="post">
+  <fieldset>
+    <div>
+      <label>Name:</label>
+      <input type="name" name="fullname">
+    </div>
 
-			</label>
-			</p>
-			<p>
-			<label>
-				<input type="radio" name="mood" value="sad"> "Sad"
-			</label>
+    <div>
+      <label>Email:</label>
+      <input type="email-address" name="email">
+    </div>
 
-			</p>
-			<p>
-				<label>
-					<input type="radio" name="mood" value="indifferent">"Indifferent"
-				</label>
-			</p>
-			<p>
-			<label>
-				"Why are you feeling this way?"
-				<textarea name="feelings"></textarea>
-			</label>
-		    </p>
-		    <p>
-		    	<button>
-				"Submit Feelings"
-		    	</button>
-		    </p>
-	</form>
+    <div>
+      <label>Password:</label>
+      <input type="password" name="password">
+    </div>
+    <div>
+      <label>Describe interests</label>
+      <input type="text" name="interests" placeholder="What subjects are you interested in?">
+    </div>
 
-	</body>
+    <div>
+      <label>Which magazine would you like?</label>
+      <select name="magazine">
+        <option value="TIME">TIME</option>
+        <option value="TIME">Rolling Stone</option>
+        <option value="TIME">New Yorker</option>
+      </select>
+    </div>
+    <div>    
+      <label>What is your address?</label>
+      <input type="address" name="address">
+    </div>
+
+    <div>
+      <input type="checkbox" name="cb-agree" value="agree">
+      I confirm that the above information is correct.
+    </div>
+    <div>
+      <textarea name="other mags" rows="10" cols="50">What other magazines would you like to subscribe to?</textarea>
+    </div>
+  </fieldset>
+  
+  <button type="submit">Confirm subscription</button>
+</form>
+</body>
 </html>
