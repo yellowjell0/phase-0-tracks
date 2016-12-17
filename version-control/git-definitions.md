@@ -13,7 +13,13 @@
 
 * What is a merge conflict?
 <<<<<<< HEAD
+<<<<<<< HEAD
 -A merge comflict occurs in many different instances, but is vaguely a discrepancy in a merge request that cant due to an error. 
 =======
 -A merge conflict occurs in many different instances, but is vaguely a discrepancy in a merge request that cant due to an error.
 >>>>>>> ruby_feature
+=======
+
+-A merge conflict occurs in many different instances, but is vaguely a discrepancy in a merge request that cant due to an error.
+
+>>>>>>> 05965c99fb489b2f9c99d0a6e15c4996efb2d7b9
