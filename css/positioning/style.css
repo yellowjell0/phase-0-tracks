@@ -5,6 +5,7 @@ section#octopus {
 	z-index: -1
 
 }
+
 section#hat {
 	position: absolute;
 	left: 490px;
@@ -12,6 +13,7 @@ section#hat {
 	
 
 }
+
 section#glasses {
 	position: absolute;
 	left: 550px;
