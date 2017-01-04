@@ -10,6 +10,7 @@ Using an elevator (for a stupid robot)
 - When the number you have chosen is displayed, wait for the door to open
 - Exit the elevator
 
+
 Entering a parking deck
 - Drive up ramp into the parking deck
 - Stop at the arm and ticket machine
