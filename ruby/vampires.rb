@@ -28,7 +28,7 @@ puts "Our company cafeteria serves garlic bread. Should we order some for you? (
 garlic_bread = gets.chomp
   if garlic_bread == "yes"
       garlic_bread = true
-   elsif garlic_bread == "no"
+   else garlic_bread == "no"
       garlic_bread = false
     end
 
@@ -36,7 +36,7 @@ puts "Would you like to enroll in the company’s health insurance? (Please ente
 health_insurance = gets.chomp 
   if health_insurance == "yes"
       health_insurance = true
-    elsif health_insurance == "no"
+    else health_insurance == "no"
       health_insurance = false
     end
 
@@ -72,3 +72,5 @@ if conclusion == true
   
 number_of_employees -= 1
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
