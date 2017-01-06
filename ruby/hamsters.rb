@@ -1,28 +1,34 @@
-puts "What is the hamster's name?"
+#get hamster's name 
+puts "Hamster Name:"
+#store name in var
 name = gets.chomp
-puts "Which volume level would this hamster prefer? 1-10?"
-volume = gets.chomp.to_i
-puts "What is the fur color of this hamster?"
+#get hamster noise level
+puts "On a scale of 1 (mute)- 10(Loud), how loud would you say your hamster is?"
+#store volume in var
+noise = gets.to_i
+#get string for hamster color
+puts "What color is your hamster?"
+#store string in var
 color = gets.chomp
-puts "Is this hamster a good cantidate for adoption? (T/F)"
-cantidate = gets.chomp
-puts "What is the estimated age?"
+#get adoptable boolean
+puts "Is hamster adoptable? (True/ False)"
+#store boolean in var
+adoptable = gets.chomp
+
+#get hamster age
+puts "How old is your hamster?"
+#store hamster age in var
 age = gets.chomp
 if age == ""
-	puts nil
+  age = nil
+else 
+  age = age.to_i
 end
 
-puts "Hello, #{name}"
-puts "OK, we'll keep it at #{volume}"
-puts "#{color} is a lovely color"
-if cantidate == "T"
-	puts "Great, we'll make the arrangements"
-elsif cantidate == "F"
-	puts "OK, into the furnace they'll go."
-end
-puts "#{name} is only #{age}?"
-		
-
-
-
-
+puts "Hamster data:
+Name: #{name}
+Age: #{age}
+Color: #{color}
+Noise Level: #{noise}
+Adoptable?: #{adoptable}
+"
