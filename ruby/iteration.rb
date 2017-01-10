@@ -1,83 +1,60 @@
-def method
-  puts "This is a method"
-  yield("simple","boring")
+def hotels_available
+    hotel1 = "Ritz Carlton"
+    hotel2 = "Hilton"
+    puts "Which hotel is available?"
+    yield(hotel1, hotel2)
 end
-
-method {|word1, word2|puts "This is a #{word1}, #{word2} block "}
-
-dev_necessities = ["food","laptop", "water", "knowledge of Google", "writing equipment", "patience"]
-
-
-
-
-dev_necessities = ["food","laptop", "water", "knowledge of Google", "writing equipment", "patience"]
-p dev_necessities
-dev_necessities.each do |item|
-  puts "#{item} is essential to success at Dev Bootcamp!"
+puts "Before the block runs"
+hotels_available { |hotel1, hotel2| puts "The #{hotel1} is available. The #{hotel2} is not available."}
+puts "After the block runs"
+#Release 1
+pets = ["dog", "cat", "snake", "bunny", "turtle"]
+pets_names = {
+    "dog" => "Fluffy",
+    "cat" => "Delilah",
+    "snake" => "Lucifer",
+    "bunny" => "Bugs",
+    "turtle" => "Henry"
+}
+p pets
+pets.each do |x|
+    puts "Everybody loves #{x}s!"
 end
-p dev_necessities
-dev_necessities.map! do |item|
-  puts "#{item}".reverse
+pets.map! do |x|
+    p x.upcase.reverse
 end
-
-###########
-family_tree = {
-  
-steve: "brother",
-judy: "cousin",
-delores: "grandmother",
-rocky: "uncle",
-meridith: "mother"
-}
-p family_tree
-family_tree.each do |name, relation|
-  puts "#{name} is my #{relation}"
+p pets
+p pets_names
+pets_names.each do |pet, name|
+  puts "This #{pet} is named #{name}."
 end
-
-# A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
-numbers_array = [1,2,3,4,5,6,7]
-numbers_array.delete_if { |number| number > 5 }
-
-numbers_hash = {
-  1 => "one",
-  2 => "two",
-  3 => "three",
-  6 => "six",
-  7 => "seven",
+p pets_names
+#Release 2
+integer_array = [1, 2, 3, 4, 5]
+integer_hash = {
+    1 => "one",
+    2 => "two",
+    3 => "three",
+    4 => "four",
+    5 => "five",
 }
-numbers_hash.delete_if { |number| number > 5 }
-
-# A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
-
-numbers_array = [1,2,3,4,5,6,7]
-numbers_array.keep_if { |number| number > 5 }
-
-numbers_hash = {
-  1 => "one",
-  2 => "two",
-  3 => "three",
-  6 => "six",
-  7 => "seven",
-}
-numbers_hash.keep_if { |number| number > 5 }
-
-# A different method that filters a data structure for only items satisfying a certain condition -- Ruby offers several options!
-
-numbers_array = [1,2,3,4,5,6,7]
-numbers_array.select { |number| number.even? }
-
-numbers_hash = {
-  1 => "one",
-  2 => "two",
-  3 => "three",
-  6 => "six",
-  7 => "seven",
-}
-numbers_hash.keep_if { |number| number.even?}
-
-# A method that will remove items from a data structure until the condition in the block evaluates to false, then stops (you may not find a perfectly working option for the hash, and that's okay).
-
-numbers_array = [1,2,3,4,5,6,7]
-
-numbers_array.take_while { |number| number < 3 }
-
+# 1 
+integer_array.delete_if { |x| x < 3 }
+p integer_array
+integer_hash.delete_if { |integer, string| string.include?("o") }
+p integer_hash
+# 2
+integer_array.keep_if { |x| x.even? }
+p integer_array
+integer_hash.keep_if { |integer, string| string.length > 4 }
+p integer_hash
+# 3
+p integer_array.select { |x| x <= 4 }
+p integer_array
+p integer_hash.select { |integer, string| string.include?("o") }
+p integer_hash
+# 4
+p integer_array.drop_while { |x| x.odd? }
+p integer_array
+p integer_hash.reject { |integer, string| integer > 3 }
+p integer_hash
