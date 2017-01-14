@@ -14,22 +14,36 @@ game_of_thrones = {
         ]
     },
     at_war_with_the_iron_throne: {
-      stark: [
+      starks: [
         'Rob',
         'Arya',
         'John Snow',
         'Sansa'
         ],
-        targaryen: 'Daenerys',
+        targaryens: [
+          'Daenerys',
+        'Viserys',
+        'Aegon(Book Only)'
+        ]
     },
-    animals: {
-        direwolf: 'Ghost',
-        dragon: 'Drogon'
-        
+    beasts: {
+        direwolves: [
+          'Ghost', 
+        'Lady',
+        'Shaggy Dog',
+        'Summer'
+        ],
+        dragons: [
+          'Drogon',
+        'Viserion',
+        'Rhaegal'
+        ]
+      
     },
   },
 }
 
-    game_of_thrones[:houses][:loyal_to_the_iron_throne][:lannister][1]
-    game_of_thrones[:houses][:animals]
-  game_of_thrones[:houses][:at_war_with_the_iron_throne][:stark].push('Rikkon')
+ game_of_thrones[:houses][:loyal_to_the_iron_throne][:lannister][1]
+ game_of_thrones[:houses][:at_war_with_the_iron_throne][:starks].push('Rikkon')
+ game_of_thrones[:houses][:beasts]
+ 
