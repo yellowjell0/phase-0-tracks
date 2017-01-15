@@ -1,55 +1,48 @@
-#pairing-session (Katy Lee, Wes Callahan)
+# Search Array Method
 
-#Release 0
-
-def fib(n)
-
-array = [0,1]
-
-i = 2
-while i < n
-array[i] = array[i-1] + array[i-2]
-array << array[i] 
-i += 1 
-end
-array.pop
-p array
-end
-
-
-fib(6)
-
-#Release 1
-
-def search_array(arr, n)
-  array = []
-  arr.each {|n| array << n}
-  i = 0
-  while i < arr.length 
-  if n == arr[i]
-  p i 
-end
-i += 1
-end
-end
-
-arr = [42, 89, 23, 1]
-search_array(arr, 89)
-
-#Release 2 
-def bubble_sort(array)
-  n = array.length 
-  loop do
-    swapped = FALSE
-    (n-1).times do |i|
-      if array[i] > array[i+1]
-        array[i], array[i+1] = array[i+1], array[i]
-        swapped = true 
-      end
-    end
-    break if not swapped 
+def search_array(arr, int)
+  new_arr = []
+  arr.each do |number|
+    new_arr << number 
+    break if number ==  int
   end
-  array
+  return new_arr.length - 1
 end
-a = [1,4,1,3,4,1,3,3]
-p bubble_sort(a)
+
+
+# Fabonacci Numbers
+
+def fabonacci(int)
+  if int > 1
+    arr = [0,1]
+    (int - 2).times do
+      arr << arr[-1] + arr[-2]
+    end
+    p arr
+    elsif int == 0
+    arr = [0]
+    elsif int == 1
+    arr = [1]
+  end
+  p arr[-1]
+end
+
+
+# fabonacci(100)[-1]
+
+
+# The odd last method sorts by bringing all even numbers to the beginning of the array and odd to the last part of the array.
+
+def odd_last(arr)
+  even_arr = []
+  arr.each do |x|
+    if x.even?
+      even_arr.unshift(x)
+    else 
+      even_arr << x
+    end
+  end
+  return even_arr
+end
+
+odd_last([7,4,3,2,2,8])
