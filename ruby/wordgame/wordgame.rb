@@ -51,17 +51,19 @@ class Wordgame
 end
 
 
-guess_the_word = Wordgame.new("Gorgonzola")
+# driver code/ UI
 
-puts "Guess a letter of the word"
 
+puts "User 1. Enter the secret code, oh secret keeper. No Peeking"
+guess_the_word = Wordgame.new(gets.chomp)
+
+puts "Guess a letter of the word, User 2."
 
 loop do
 
 guess = gets.chomp
+
 guess_the_word.word_guesses(guess)
-
-
 
 if guess_the_word.win
   puts "You Win!"
