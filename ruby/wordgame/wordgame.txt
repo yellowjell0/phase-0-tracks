@@ -1,0 +1,5 @@
+The player enters a word as the initialization argument. That word becomes the secret word
+The player attempts to solve the word by gessing letters, which return in the string if the letter is in the word.
+Repeated guesses do not count against the player.
+The guessing player receives continual feedback on the current state of the word. So if the secret word is "unicorn", the player will start out seeing something like "_ _ _ _ _ _ _", which would become "_ _ _ c _ _ _" after the player enters a guess of "c".
+The player should get a congratulatory message if they win, and a taunting message if they lose.

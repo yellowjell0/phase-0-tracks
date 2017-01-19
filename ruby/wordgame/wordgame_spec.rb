@@ -1,0 +1,32 @@
+
+
+require_relative 'wordgame'
+
+describe Wordgame do
+	let(:guess_the_word) {Wordgame.new("Gorgonzola") }
+
+	it "returns a string of spaces the length of the secret word and the letter if correct" do
+ 		expect(guess_the_word.word_guesses("a")).to eq ("---------A")
+ 	end
+	
+	it "returns false until conditions have been met" do
+		expect(guess_the_word.win).to eq (false)
+	end
+
+	it "returns false until conditions have been met" do
+		expect(guess_the_word.lose).to eq (false)
+	end
+
+	it "returns true if multiple guesses have ben made of the same value" do
+		expect(guess_the_word.double_guess("a")).to eq (false)
+	end
+
+	it "returns a value only when conditions are met" do
+		expect(guess_the_word.guessed_right).to eq (nil)
+	end
+
+	it "returns one less chance" do
+		expect(guess_the_word.guessed_wrong).to eq (9)
+	end
+
+end
