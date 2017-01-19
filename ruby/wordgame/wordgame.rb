@@ -4,14 +4,14 @@ class Wordgame
   def initialize(word)
     @word = word.upcase!
     @word_array = word.split('')
-    @word_spaces = "-".split('') * @word.length
+    @word_spaces = "-".split('') * word.length
     @guess_array = []
-    @chances_left = @word.length
+    @chances_left = word.length
   end
 
-    def word_guesses(guess)
+    def word_guesses(guess, word)
       @guess = guess.upcase!
-      @word.length.times do |i|
+        word.length.times do |i|
         if @word_array[i].include?(@guess.to_s) == true
           @word_spaces[i] = @word_array[i]
         elsif
@@ -22,7 +22,7 @@ class Wordgame
     end
 
     def win
-      !@word_spaces.include?('-')
+      @word_spaces.join('').upcase === @word
     end
     
     def lose
@@ -55,7 +55,10 @@ end
 
 
 puts "User 1. Enter the secret code, oh secret keeper. No Peeking"
-guess_the_word = Wordgame.new(gets.chomp)
+
+word = gets.chomp
+
+guess_the_word = Wordgame.new(word)
 
 puts "Guess a letter of the word, User 2."
 
@@ -63,7 +66,7 @@ loop do
 
 guess = gets.chomp
 
-guess_the_word.word_guesses(guess)
+guess_the_word.word_guesses(guess, word)
 
 if guess_the_word.win
   puts "You Win!"
