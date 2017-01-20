@@ -10,6 +10,20 @@ class Santa
 		p "Initializing Santa instance ..."
 	end
 
+# Getter and setter methods
+	
+	# def ethnicity
+	# 	@ethnicity
+	# end
+
+	# def gender=(new_gender)
+		# @gender = new_gender
+	# end
+			
+	# def age=(new_age)
+		# @age = new_age
+	# end
+
 	def eat_milk_and_cookies(cookie)
 		p "That was a good #{cookie} cookie!" 
 	end
