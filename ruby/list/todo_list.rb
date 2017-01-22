@@ -1,22 +1,27 @@
-class Todo_list
+class TodoList
+	
+	def initialize(array)
+		@array = array
+	end
 
 	def get_items
-		@get_items = ["do the dishes", "mow the lawn"]
+		@array
 	end
 
-	def add_item(item)
-	  get_items.push(item)
-	 
-	end
-	  
-	  
-	def delete_item(x)
-		get_items.delete_at(x)
-		p @get_items
+	def add_item(new_item)
+		@array.push(new_item)
 	end
 
-		def retrieve_item(x)
-		get_items[x]
+	def delete_item(item_to_delete)
+		@array.delete(item_to_delete)
+	end
+
+	def get_item(int)
+		@array[int]
+	end
+
 end
 
-end
+
+# list = TodoList.new(["a", "b"])
+# list.get_items

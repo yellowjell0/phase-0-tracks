@@ -48,6 +48,6 @@ class Sensitivity_training
 relationship = Relationships.new
 relationship.good_relationship
 relationship.bad_relationship
-puts "-----------------"
+puts "=" * 50
 sensitivity_training = Sensitivity_training.new
 sensitivity_training.what_to_do
