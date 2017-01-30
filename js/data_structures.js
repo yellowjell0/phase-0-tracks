@@ -1,35 +1,38 @@
-var colors = ["yellow", "green", "red", "orange"];
-var names = ["Ted", "Brandon", "Grace", "Nick"];
+var colorsArray = ["blue", "red", "orange", "yellow"];
+var horseNames = ["Rod", "Davis", "Gunner", "Fletcher"];
 
-// colors.push("violet");
-// names.push("Henry");
+colorsArray.push("green");
+horseNames.push("Aries");
 
-var hash = {name: "", color: ""};
-
-
-for(var i = 0; i < names.length; i++) {
-colors.forEach; {
-hash.name = names;
-hash.color = colors;
-console.log("The horse's name is "  + hash.name[i] + " and the color is " + hash.color[i] + ".")
-}
+function horseHash(hash1, hash2) {
+ var hash = {}
+ for (var i = 0; i < hash1.length; i++){
+   hash[horseNames[i]] = colorsArray[i];
+ }
+ return hash
 }
 
-// print
-console.log(hash)
+horseHash(horseNames, colorsArray)
 
-// constructor function
-function Car(brand, age, color) {
-	this.brand = brand;
-	this.age = age;
-	this.color = color;
-	this.honk = function() {
-		console.log("Honk!")
-	};
-};
-// driver code
-var new_car = new Car("Ford", 8, "Black");
-console.log(new_car)
-new_car.honk()
-var second_car = new Car("Toyota", 7, "Red");
-console.log(second_car)
+
+function Car(color, make, model, year, isNew) {
+ console.log("New car:", this);
+
+ this.color = color;
+ this.make = make;
+ this.model = model;
+ this.year = year;
+ this.isNew = isNew;
+
+ this.honk = function() { console.log("Honk!"); };
+ console.log("CAR INITIALIZATION COMPLETE!");
+}
+
+var newCar = new Car('red', 'Ferrari', 'California', 2016, true);
+newCar.honk();
+console.log(newCar);
+console.log("---------");
+
+var coolCar = new Car('blue', 'Tesla', 'Model X', 2016, false);
+coolCar.honk();
+console.log(coolCar);
