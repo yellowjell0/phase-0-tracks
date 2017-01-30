@@ -14,9 +14,9 @@ end
 # output: hash
 def make_grocery_list(items)
   grocery_list = {}
-  grocery_item = items.split(' ')
-    grocery_item.each do |i|
-      grocery_list[i] = rand(1..4)
+  grocery_item = items.split
+  grocery_item.each do |i|
+      grocery_list[i] = 1
     end
  print_list(grocery_list)
 end
@@ -28,9 +28,9 @@ end
 # input: hash, string and integer in that order
 # steps: adds new key and value to the hash
 # output: string
-def add_item_to_list(grocery_list, grocery_item, quantity)
+def add_item_to_list(grocery_list, grocery_item, quantity = 1)
   grocery_list.store(grocery_item,quantity)
-  p "I've added #{grocery_item} to the list. Please pick up #{quantity} of these."
+  puts "I've added #{grocery_item} to the list. Please pick up #{quantity} of these."
 end
 
  
@@ -40,8 +40,8 @@ end
 # output: string
 
 def remove_item_from_list(grocery_list,item_to_delete)
-grocery_list.delete(item_to_delete)
-p "No need to pick up #{item_to_delete} anymore."
+  grocery_list.delete(item_to_delete)
+  puts "No need to pick up #{item_to_delete} anymore."
 end
 
 
@@ -63,8 +63,9 @@ grocery_list = {
 # output: string
 
 def update_quantity(grocery_list,item,new_quantity)
+  # if item on the list
   grocery_list.store(item,new_quantity)
-  p "When you pick up #{item}, make sure to grab #{new_quantity} instead."
+  puts "When you pick up #{item}, make sure to grab #{new_quantity} instead."
 end
 
 # update_quantity(grocery_list,"milk",4)
