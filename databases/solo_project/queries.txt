@@ -1,0 +1,27 @@
+Display the information in one table (either table is fine).
+SELECT * FROM HOTSPOTS;
+
+Update an item that meets some condition (you can choose a condition that makes sense).
+UPDATE HOTSPOTS SET open_for_dinner="False" WHERE restaurant_name="The Couch Potato";
+
+Display the information in both tables using one query.
+SELECT * FROM HOTSPOTS, DIETS WHERE HOTSPOTS.diet_id = DIETS.id;    
+
+Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+SELECT HOTSPOTS.restaurant_name, HOTSPOTS.open_for_lunch, HOTSPOTS.open_for_dinner, DIETS.diet_type FROM HOTSPOTS JOIN DIETS ON HOTSPOTS.diet_id = DIETS.id;
+
+Delete an item that meets some condition (you can choose a condition that makes sense).
+DELETE FROM HOTSPOTS WHERE id = 1;
+
+Try a few different joins in your database, and record the commands and the output in queries.txt.
+
+CROSS JOIN - 
+SELECT restaurant_name, open_for_lunch, open_for_dinner FROM HOTSPOTS CROS JOIN DIETS;
+
+INNER JOIN - 
+SELECT restaurant_name, open_for_lunch, open_for_dinner, diet_type FROM HOTSPOTS INNER JOIN DIETS ON HOTSPOTS.diet_id = DIETS.id;
+
+OUTER JOIN - 
+SELECT restaurant_name, open_for_lunch, open_for_dinner, diet_type FROM HOTSPOTS LEFT OUTER JOIN DIETS ON HOTSPOTS.diet_id = DIETS.id;
+
+
