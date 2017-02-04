@@ -1,0 +1,24 @@
+You've joined two tables before. How do you join three?
+SELECT * FROM reviews
+LEFT JOIN business ON reviews.business_id = business.id
+LEFT JOIN users ON reviews.users_id = users.id;
+
+There are some repetitive columns if we choose to view all fields. Choose instead to just view the user's names, the business name, the star rating, and the comment.
+SELECT
+reviews.id AS reviews_id,
+reviews.stars AS reviews_stars,
+reviews.comments AS reviews_comments,
+business.name AS business_name,
+users.last_name AS users_last_name,
+users.first_name AS users_first_name
+FROM
+reviews
+LEFT JOIN users ON reviews.users_id = users.id
+LEFT JOIN business ON reviews.business_id = business.id;
+
+How do you view the data of all three tables for just one particular business? 
+sqlite> SELECT * FROM reviews
+LEFT JOIN users ON reviews.users_id = users.id
+LEFT JOIN business ON reviews.business_id = business.id
+WHERE name="Fred's Fried Chicken";
+
