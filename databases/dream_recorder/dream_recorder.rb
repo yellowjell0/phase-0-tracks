@@ -71,25 +71,27 @@ blissful_dreams = 0
 
 if weekly_array.length % 7 == 0 
 	
-weekly_array = weekly_array[-7..-1]
+	weekly_array = weekly_array[-7..-1]
 
-puts "For the week, your dreams have been:"
+	puts "For the week, your dreams have been:"
+	
 	weekly_array.each do |dreams_log_array|
-				puts "On #{dreams_log_array['date']}, you dreamt #{dreams_log_array['description']}."
-				no_dreams += 1 if dreams_log_array.has_value?("no dream")
-				vivid_dreams += 1 if dreams_log_array['vivid'] == "true"
-				recurring_dreams += 1 if dreams_log_array['recurring'] == "true"
-				nightmares += 1 if dreams_log_array['tone'] == "nightmare"
-				regular_dreams += 1 if dreams_log_array['tone'] == "regular"
-				blissful_dreams += 1 if dreams_log_array['tone'] == "blissful"
+		puts "On #{dreams_log_array['date']}, you dreamt #{dreams_log_array['description']}."
+		no_dreams += 1 if dreams_log_array.has_value?("no dream")
+		vivid_dreams += 1 if dreams_log_array['vivid'] == "true"
+		recurring_dreams += 1 if dreams_log_array['recurring'] == "true"
+		nightmares += 1 if dreams_log_array['tone'] == "nightmare"
+		regular_dreams += 1 if dreams_log_array['tone'] == "regular"
+		blissful_dreams += 1 if dreams_log_array['tone'] == "blissful"
 	end
-	puts "Now lets tally up your dream types for the week."
-	puts "Wait, what? Nights without dreams: #{no_dreams}." 
-	puts "Pinch yourself! Nights with vivid dreams: #{vivid_dreams}."
-	puts "Deja Vu! Nights with recurring dreams: #{recurring_dreams}."
-	puts "Uh-oh, Nights with nightmares: #{nightmares}."
-	puts "Boring! Nights with regular dreams #{regular_dreams}."
-	puts "Can't this just be the real world? Nights with blissful dreams: #{blissful_dreams}."
+
+puts "Now lets tally up your dream types for the week."
+puts "Wait, what? Nights without dreams: #{no_dreams}." 
+puts "Pinch yourself! Nights with vivid dreams: #{vivid_dreams}."
+puts "Deja Vu! Nights with recurring dreams: #{recurring_dreams}."
+puts "Uh-oh, Nights with nightmares: #{nightmares}."
+puts "Boring! Nights with regular dreams #{regular_dreams}."
+puts "Can't this just be the real world? Nights with blissful dreams: #{blissful_dreams}."
 
 end
 	
