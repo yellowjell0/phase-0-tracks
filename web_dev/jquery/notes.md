@@ -1,0 +1,1 @@
+The method I use to tackle new subjects is by attending the University Of YouTube, majoring in watching tutorials and minoring in Google-ing. Articles and cheat sheets help too. I would say testing each concept is a good rule of thumbs. And breaks are important, but should be timed.

@@ -1,0 +1,111 @@
+body {
+	background-image: url(../images/beer-bkground.jpg);
+	background-blend-mode: screen;
+	filter : brightness(80%);
+	background-size: 38%;
+	background-repeat: repeat-x repeat-y;
+	font-weight: 900;
+
+
+}
+
+#intro {
+	font-size: 25px;
+
+}
+
+#title {
+	font-size: 3em;
+}
+
+h1{
+	text-align: center;
+}
+
+h2 {
+	font-style: oblique;
+}
+table {
+	border-color: #6B8E23;
+	border-style: groove;
+	border-width: 10px;
+	margin-left: 25%;
+}
+
+h3 {
+	text-align: center;
+}
+section.Beer-ingredient {
+	border: 10px outset #6B8E23;
+	width: 600px;
+	height: 350px;
+	margin-left: 25%;
+}
+
+ol {
+	border-left: 10px solid #6B8E23;
+	border-right: 10px solid #6B8E23;
+}
+
+section.guy-chugs {
+	border-color: #6B8E23;
+	border-style: solid;
+	height: 350px;
+	width: 400px;
+	float: right;
+	
+	
+}
+	
+section.mailing {
+	padding: 5px;
+	position: relative;
+	left: 85%;
+	text-align: center;
+	border: 4px solid black;
+	width: 150px;
+	height: 75px;
+}
+
+#slideshow {
+
+    text-align: center;
+}
+
+
+/*#slideshow > div { 
+
+
+    top: 10px; 
+    left: 10px; 
+    right: 10px; 
+    bottom: 10px; 
+}
+*/
+
+#Intro-title {
+font-size: 50px;
+text-align: center;
+}
+
+a:hover {
+	color: green;
+}
+a:visited {
+	color: navy;
+}
+
+
+@media screen and (max-width: 300px) {
+	body {
+		font-size: 2em;
+		width: 50px}
+}
+
+
+    .active{
+        z-index:99;
+    }
+
+
+}
