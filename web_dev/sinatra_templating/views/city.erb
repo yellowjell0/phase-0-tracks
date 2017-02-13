@@ -1,0 +1,20 @@
+<!-- Add an ERB template to the application in phase-0-tracks/web_dev/sinatra_templating. It can be relevant to the other pages 
+# or something totally different, but it should use at least one dynamic piece of data (which you'll populate in the next release). -->
+<!-- Allow the user to add or manipulate data in some way using a form. For example, you might add a 
+# campuses table to the database and allow the user to add additional cities to accomplish DBC 
+# world domination. It's likely that you'll want to use a POST request, since that's the best practice, 
+# but what happens if you use a GET request instead? How does the form's submission behavior change? -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form action="/city" method="POST">
+    <input type="text" name="city" placeholder="City">
+    <input type="text" name="dean" placeholder="Dean">
+    <button type="submit">Save</button>
+  </form>
+</body>
+</html>
+
